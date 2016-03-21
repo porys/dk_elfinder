@@ -25,8 +25,9 @@ COPY connector.minimal.php /var/www/html/php/
 COPY index.html	/var/www/html/
 COPY elfinderBasicAuth.js /var/www/html/js/
 
-RUN  sed -i 's/Indexes//g' /etc/apache2/apache2.conf
+RUN sed -i 's/Indexes//g' /etc/apache2/apache2.conf
+RUN sed -i '/Listen 80/a\\Listen 8080' /etc/apache2/ports.conf
 
 
 EXPOSE 80
-
+EXPOSE 8080
