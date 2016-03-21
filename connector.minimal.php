@@ -100,11 +100,12 @@ function roaccess($attr, $path, $data, $volume) {
 // https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options
 $opts = array(
     // 'debug' => true,
+    'locale' => 'en_US.UTF-8',
     'roots' => array(
         array(
             'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
             'path'          => '/var/www/data',                 // path to files (REQUIRED)
-            'URL'           => 'http://rainbowstrawberry.dlinkddns.com', // URL to files (REQUIRED)
+            'URL'           => 'http://rainbowstrawberry.dlinkddns.com:9090', // URL to files (REQUIRED)
 #            'uploadDeny'    => array('all'),                // All Mimetypes not allowed to upload
 #            'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 #            'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
